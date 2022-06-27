@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://platform.tres" type="Shape2D" id=1]
+[ext_resource path="res://tile_0000.png" type="Texture" id=2]
+
+[node name="block" type="KinematicBody2D"]
+
+[node name="sprite" type="Sprite" parent="."]
+scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 9.31323e-10
+shape = ExtResource( 1 )
