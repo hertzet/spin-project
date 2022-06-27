@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://close-with-scape-and-restart.gd" type="Script" id=2]
 [ext_resource path="res://background_0004.png" type="Texture" id=4]
 [ext_resource path="res://rotate-with-keyboard.gd" type="Script" id=5]
-[ext_resource path="res://Camera2D.gd" type="Script" id=10]
 [ext_resource path="res://block.tscn" type="PackedScene" id=11]
 
 [node name="world" type="Node2D"]
@@ -43,7 +42,6 @@ script = ExtResource( 5 )
 [node name="Camera2D" type="Camera2D" parent="Node2D"]
 position = Vector2( -486, -486 )
 current = true
-script = ExtResource( 10 )
 
 [node name="block2" parent="Node2D" instance=ExtResource( 11 )]
 position = Vector2( 270, 540 )

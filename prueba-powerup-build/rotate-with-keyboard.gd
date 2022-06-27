@@ -3,6 +3,7 @@ var escena_bloque = preload("res://block.tscn")
 const GRILLA = 54
 
 onready var player: Node2D = $player
+onready var camara: Camera2D = $Camera2D
 var rotacion: float = 0
 
 func _input(event):
@@ -36,6 +37,9 @@ func add_bloques():
 		add_child(bloque)
 
 func _physics_process(delta):
+	# la cámara sigue al player
+	camara.position = player.position
+
 	var nueva_rotacion: float = move_toward(rotation_degrees, rotacion, 80 * delta)
 	rotation_degrees = nueva_rotacion
 	player.rotation_degrees = -nueva_rotacion
